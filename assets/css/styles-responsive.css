@@ -1,0 +1,114 @@
+/* =========================================================
+   styles-responsive.css — Estilos responsivos globales
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-figure { order: -1; }
+  .sol-grid, .mv-grid, .movil-grid, .contacto-grid { grid-template-columns: 1fr; }
+  .eco-grid { grid-template-columns: 1fr 1fr; }
+  .suc-grid { grid-template-columns: 1fr 1fr; }
+  
+  /* Nosotros (Fallback) */
+  .quienes-grid { grid-template-columns: 1fr; gap: var(--sp-4); }
+  .quienes-media { order: -1; aspect-ratio: 16/9; }
+  .mvv-grid { grid-template-columns: 1fr; }
+  
+  /* Porque (Fallback) */
+  .porque-layout { grid-template-columns: 1fr; }
+  .porque-fig { display: none; }
+  .porque-col--left { flex-direction: column; }
+
+  /* Vista Contacto */
+  .contact-grid-split {
+    grid-template-columns: 1fr;
+  }
+  .contact-info-col {
+    padding: var(--sp-4);
+  }
+  .contact-form-col {
+    padding: var(--sp-4);
+  }
+}
+
+@media (max-width: 760px) {
+  .main-nav, .header-cta { display: none; }
+  .nav-toggle { display: flex; }
+  .site-header.nav-open .main-nav {
+    display: flex; position: absolute; top: var(--header-h); left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--blanco);
+    box-shadow: var(--shadow-md); padding: .5rem 0;
+  }
+  .site-header.nav-open .main-nav a { padding: .9rem 1.6rem; border-bottom: 1px solid var(--gris-100); }
+  .site-header.nav-open .header-cta {
+    display: flex; position: absolute; top: calc(var(--header-h) + 290px); left: 0; right: 0;
+    flex-direction: column; gap: .6rem; padding: 1rem 1.6rem; background: var(--blanco);
+  }
+  
+  .serv-grid { grid-template-columns: 1fr; }
+  .eco-grid, .suc-grid, .sol-list { grid-template-columns: 1fr; }
+  .section { padding: var(--sp-6) 0; }
+  .hero-badge { left: 0; }
+  
+  /* Fuerza (index.html) */
+  .fuerza-grid { grid-template-columns: 1fr; }
+  .fuerza-x { transform: rotate(90deg); }
+  .mv-grid { grid-template-columns: 1fr; }
+  
+  /* Nosotros (Fallback) */
+  .mvv-grid { grid-template-columns: 1fr; }
+  .quienes-logos { gap: .8rem; }
+  .quienes-logos img { height: 34px; }
+}
+
+@media (max-width: 680px) {
+  /* Mindmap interactive diagram */
+  .mindmap-wrap { display: none; }
+  .mindmap-mobile-fallback { display: block; }
+}
+
+@media (max-width: 580px) {
+  /* Vista Contacto */
+  .form-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .contact-premium-form {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* FAQ Chatbox */
+  .faq-chatbox {
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+  }
+  .chatbox-trigger {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .chatbox-tooltip {
+    bottom: 70px;
+    right: 0;
+    left: 0;
+    white-space: normal;
+  }
+  .chatbox-window {
+    position: fixed;
+    bottom: 85px;
+    left: 15px;
+    right: 15px;
+    width: auto;
+    height: calc(100% - 100px);
+    max-height: 480px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .btn:hover, a.eco-card:hover { transform: none; }
+}

@@ -1,0 +1,62 @@
+/* =========================================================
+   encuentranos-responsive.css — Estilos responsivos para encuentranos.html
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .enc-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enc-map-wrap,
+  .enc-map-wrap iframe {
+    min-height: 360px;
+  }
+
+  .enc-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .enc-stats {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .enc-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .enc-cta-btns {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .enc-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .enc-stats li {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .enc-map-wrap,
+  .enc-map-wrap iframe {
+    min-height: 280px;
+  }
+
+  .enc-cta-btns .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .enc-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .enc-hero-title { font-size: 2.2rem; }
+}
