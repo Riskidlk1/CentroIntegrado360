@@ -9,13 +9,11 @@
     content="Centro Integrado 360: la unión de OHS Centro Médico y Grupo Renee. Salud ocupacional y seguridad industrial bajo un solo modelo 360. Guayaquil, Quito y Manta." />
   <meta name="theme-color" content="#134295" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Centro Integrado 360 | La evolución de la salud y seguridad" />
   <meta property="og:description"
     content="Salud ocupacional + seguridad industrial, 2 en 1. Convertimos riesgos en prevención." />
   <meta property="og:type" content="website" />
 
-  <!-- Tipografías de marca: Poppins (Google) + Garet (Fontshare) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -25,12 +23,12 @@
 
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/styles-responsive.css" />
+  <link rel="stylesheet" href="assets/css/styles-home.css" />
 </head>
 
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- ===================== HEADER / NAV ===================== -->
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Centro Integrado 360 - inicio">
@@ -40,7 +38,6 @@
 
       <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
 
-        <!-- Inicio ▼ -->
         <div class="nav-item-dropdown">
           <a href="#top" class="dropdown-trigger">Inicio <span class="arrow-down">▾</span></a>
           <div class="dropdown-menu">
@@ -50,7 +47,6 @@
           </div>
         </div>
 
-        <!-- Nosotros ▼ -->
         <div class="nav-item-dropdown">
           <a href="nosotros.html" class="dropdown-trigger">Nosotros <span class="arrow-down">▾</span></a>
           <div class="dropdown-menu">
@@ -60,7 +56,6 @@
           </div>
         </div>
 
-        <!-- Servicios ▼ (Salud Ocupacional / Seguridad Industrial / Particular) -->
         <div class="nav-item-dropdown">
           <a href="#servicios" class="dropdown-trigger">Servicios <span class="arrow-down">▾</span></a>
           <div class="dropdown-menu">
@@ -70,7 +65,6 @@
           </div>
         </div>
 
-        <!-- Productos ▼ -->
         <div class="nav-item-dropdown">
           <a href="productos.html" class="dropdown-trigger">Productos <span class="arrow-down">▾</span></a>
           <div class="dropdown-menu">
@@ -78,10 +72,8 @@
           </div>
         </div>
 
-        <!-- Encuéntranos -->
         <a href="encuentranos.html" class="dropdown-trigger">Encuéntranos</a>
 
-        <!-- Contacto ▼ -->
         <div class="nav-item-dropdown">
           <a href="contacto.html" class="dropdown-trigger">Contacto <span class="arrow-down">▾</span></a>
           <div class="dropdown-menu">
@@ -90,7 +82,6 @@
           </div>
         </div>
 
-        <!-- Búsqueda -->
         <button class="search-trigger-btn" id="searchTriggerBtn" aria-label="Buscar en el sitio">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round">
@@ -100,7 +91,6 @@
         </button>
 
       </nav>
-
 
       <div class="header-cta">
         <a href="#ecosistema" class="btn btn-ghost btn-sm">Portal pacientes</a>
@@ -114,6 +104,7 @@
   </header>
 
   <main id="main">
+
     <!-- ===================== HOME BANNER (CARRUSEL SLIDER) ===================== -->
     <section class="home-banner" aria-label="Banner principal">
       <div class="slider-wrapper" id="homeSlider">
@@ -133,13 +124,13 @@
           <div class="slide">
             <img src="assets/img/Homepage/banners4.jpeg" alt="Centro Integrado 360 - Banner principal 5" />
           </div>
-        </div>
+          <div class="slide">
+            <img src="assets/img/Homepage/banner5.jpeg" alt="Centro Integrado 360 - Banner principal 5" />
+          </div>
 
-        <!-- Controles de navegación -->
+        </div>
         <button class="slider-btn prev-btn" id="prevSlideBtn" aria-label="Anterior">&#10094;</button>
         <button class="slider-btn next-btn" id="nextSlideBtn" aria-label="Siguiente">&#10095;</button>
-
-        <!-- Indicadores / Dots -->
         <div class="slider-dots" id="sliderDots">
           <span class="dot active" data-index="0"></span>
           <span class="dot" data-index="1"></span>
@@ -195,6 +186,12 @@
 
     <!-- ===================== UNA SOLA FUERZA / NOSOTROS ===================== -->
     <section class="section fuerza" id="nosotros" aria-labelledby="fuerza-title">
+      <div class="fuerza-halftone" aria-hidden="true">
+        <div class="fuerza-halftone-tl"></div>
+        <div class="fuerza-halftone-tr"></div>
+        <div class="fuerza-halftone-bl"></div>
+        <div class="fuerza-halftone-br"></div>
+      </div>
       <div class="container fuerza-inner">
         <p class="section-kicker">ES UNA SOLA FUERZA</p>
         <h2 id="fuerza-title" class="section-title">Dos marcas,<br>un mismo compromiso</h2>
@@ -259,102 +256,71 @@
     <!-- ===================== ¿QUÉ SOLUCIONAMOS? ===================== -->
     <section class="section solucionamos-nueva" id="solucionamos">
       <div class="container solucionamos-grid">
-        <!-- Columna Izquierda -->
         <div class="sol-left">
           <h2 class="sol-title">¿Qué solucionamos?</h2>
           <p class="sol-desc">
             Ofrecemos soluciones integrales en el área médica, ocupacional y preventiva, contando con personal altamente
-            capacitado, tecnologías y modernos procesos enfocados en la calidad de atención y valoración de nuestros
-            clientes y afiliados mágicos.
+            capacitado, tecnologías y equipos adecuados, procesos enfocados en la calidad de atención y satisfacción de
+            nuestros pacientes y aliados estratégicos.
           </p>
 
           <h3 class="sol-subtitle">Tipos de riesgos que gestionamos para tu empresa.</h3>
 
           <div class="risks-grid">
+
+            <!-- FÍSICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <circle cx="17" cy="14" r="3" />
-                  <line x1="22" y1="19" x2="19.1" y2="16.2" />
-                </svg>
+                <img src="assets/img/Iconos/riesgos/fisico.svg" alt="Riesgo Físico" />
               </div>
               <span>Físico</span>
             </div>
 
+            <!-- QUÍMICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M6 20h12M10 4h4M10 4v5L5 18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2L14 9V4" />
-                  <path d="M7.5 14.5h9" />
-                </svg>
+                <img src="assets/img/Iconos/riesgos/quimico.svg" alt="Riesgo Químico" />
               </div>
               <span>Químico</span>
             </div>
 
+            <!-- BIOLÓGICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="5" />
-                  <path
-                    d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" />
-                  <circle cx="12" cy="4.5" r="1" />
-                  <circle cx="12" cy="19.5" r="1" />
-                  <circle cx="4.5" cy="12" r="1" />
-                  <circle cx="19.5" cy="12" r="1" />
-                </svg>
+                <img src="assets/img/Iconos/riesgos/biologico.svg" alt="Riesgo Biológico" />
               </div>
               <span>Biológico</span>
             </div>
 
+            <!-- ERGONÓMICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="15" cy="5" r="2" />
-                  <path d="M9 11l4-3 3 4-2 6" />
-                  <path d="M13 8l-4 4v3" />
-                  <rect x="4" y="11" width="5" height="5" rx="1" />
-                </svg>
+                <img src="assets/img/Iconos/riesgos/ergonomico.svg" alt="Riesgo Ergonómico" />
               </div>
               <span>Ergonómico</span>
             </div>
 
+            <!-- MECÁNICO -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="8.5" cy="14.5" r="3.5" />
-                  <path d="M8.5 9.5v1.5M8.5 18v1.5M3.5 14.5h1.5M12 14.5h1.5" />
-                  <circle cx="15.5" cy="8.5" r="2.5" />
-                  <path d="M15.5 5v1.5M15.5 11v1.5M12.5 8.5h1.5M17.5 8.5h1.5" />
-                </svg>
+                <img src="assets/img/Iconos/riesgos/mecanico.svg" alt="Riesgo Mecánico" />
               </div>
               <span>Mecánico</span>
             </div>
 
+            <!-- PSICOSOCIAL -->
             <div class="risk-item">
               <div class="risk-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path
-                    d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z" />
-                  <path d="M9.5 9h5M12 6.5v5" />
-                  <circle cx="12" cy="9" r="1.5" />
-                </svg>
+                <img src="assets/img/Iconos/riesgos/psicosocial.svg" alt="Riesgo Psicosocial" />
               </div>
               <span>Psicosocial</span>
             </div>
+
           </div>
 
           <a href="nosotros.html#riesgos" class="btn btn-sol-cta">Ver Matriz IPER <span>›</span></a>
         </div>
 
-        <!-- Columna Derecha -->
         <div class="sol-right-col">
           <div class="sol-list-items">
             <div class="sol-list-card">Evaluación médica ocupacional</div>
@@ -451,7 +417,6 @@
     <!-- ===================== CANAL YOUTUBE ===================== -->
     <section class="section yt-section" aria-labelledby="yt-section-title">
       <div class="container yt-grid">
-        <!-- Columna Izquierda: Información -->
         <div class="yt-content">
           <h2 id="yt-section-title">Conoce cómo transformamos la salud ocupacional en las empresas</h2>
           <p>Accede a consultas de medicina general, especialidades y más, con la calidad y confianza de OHS Centro
@@ -466,7 +431,6 @@
           </a>
         </div>
 
-        <!-- Columna Derecha: Tarjeta de Video YouTube -->
         <div class="yt-card-wrapper">
           <a href="https://www.youtube.com/watch?v=h9grqFrW2kA" target="_blank" rel="noopener" class="yt-card"
             aria-label="Ver video Feria - AgroAzucar en YouTube">
@@ -521,7 +485,7 @@
   </main>
 
   <!-- ===================== REDES SOCIALES ===================== -->
-  <section class="social-blue-section">
+  <section class="social-blue-section" aria-label="Redes sociales">
     <div class="container">
       <h2 class="social-title">Accede a nuestras redes sociales</h2>
       <div class="social-grid">
@@ -529,30 +493,39 @@
           <h3>@centromedico_ohs</h3>
           <div class="social-links">
             <a href="https://wa.me/593992631451" target="_blank" rel="noopener" aria-label="WhatsApp OHS">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966a9.78 9.78 0 0 0-6.975-2.881c-5.433 0-9.86 4.371-9.864 9.8-.001 1.73.457 3.414 1.32 4.9l-.317 1.157 1.218-.32 1.019.598zm9.718-6.938c-.3-.15-1.771-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.776.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.49-.893-.797-1.496-1.782-1.672-2.08-.175-.3-.018-.462.158-.636.159-.156.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.233-.243-.586-.492-.507-.676-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.11 4.52.714.31 1.27.494 1.704.632.717.228 1.37.196 1.885.119.574-.086 1.771-.725 2.021-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
             </a>
-            <a href="https://www.facebook.com/share/1KiGc3uQm6/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook OHS">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+            <a href="https://www.facebook.com/share/1KiGc3uQm6/" target="_blank" rel="noopener"
+              aria-label="Facebook OHS">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/centromedico_ohs?igsh=dnZ5N3U3dGNtNzhu" target="_blank" rel="noopener" aria-label="Instagram OHS">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://www.instagram.com/centromedico_ohs" target="_blank" rel="noopener"
+              aria-label="Instagram OHS">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/centro-m%C3%A9dico-ohs-45673b123/" target="_blank" rel="noopener" aria-label="LinkedIn OHS">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            <a href="https://www.linkedin.com/in/centro-m%C3%A9dico-ohs-45673b123/" target="_blank" rel="noopener"
+              aria-label="LinkedIn OHS">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-            <a href="https://www.youtube.com/@CentroMedico_OHS/featured" target="_blank" rel="noopener" aria-label="YouTube OHS">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            <a href="https://www.youtube.com/@CentroMedico_OHS/featured" target="_blank" rel="noopener"
+              aria-label="YouTube OHS">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
           </div>
@@ -561,30 +534,39 @@
           <h3>@grupo_renee</h3>
           <div class="social-links">
             <a href="https://wa.me/593984064249" target="_blank" rel="noopener" aria-label="WhatsApp Grupo Renee">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966a9.78 9.78 0 0 0-6.975-2.881c-5.433 0-9.86 4.371-9.864 9.8-.001 1.73.457 3.414 1.32 4.9l-.317 1.157 1.218-.32 1.019.598zm9.718-6.938c-.3-.15-1.771-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.776.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.49-.893-.797-1.496-1.782-1.672-2.08-.175-.3-.018-.462.158-.636.159-.156.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.233-.243-.586-.492-.507-.676-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.11 4.52.714.31 1.27.494 1.704.632.717.228 1.37.196 1.885.119.574-.086 1.771-.725 2.021-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
             </a>
-            <a href="https://www.facebook.com/share/14eQuZJYQS2/?mibextid=wwXIf" target="_blank" rel="noopener" aria-label="Facebook Grupo Renee">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+            <a href="https://www.facebook.com/share/14eQuZJYQS2/" target="_blank" rel="noopener"
+              aria-label="Facebook Grupo Renee">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/grupo_renee?igsh=ZjVkb3Bjemh2Ynd6" target="_blank" rel="noopener" aria-label="Instagram Grupo Renee">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://www.instagram.com/grupo_renee" target="_blank" rel="noopener"
+              aria-label="Instagram Grupo Renee">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/grupo-renee/" target="_blank" rel="noopener" aria-label="LinkedIn Grupo Renee">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            <a href="https://www.linkedin.com/in/grupo-renee/" target="_blank" rel="noopener"
+              aria-label="LinkedIn Grupo Renee">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-            <a href="https://www.youtube.com/@grureneesas.a.1385" target="_blank" rel="noopener" aria-label="YouTube Grupo Renee">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            <a href="https://www.youtube.com/@grureneesas.a.1385" target="_blank" rel="noopener"
+              aria-label="YouTube Grupo Renee">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
           </div>
@@ -600,13 +582,85 @@
       <div class="footer-brand">
         <span class="brand-360 brand-360--lg">360</span>
         <p>Centro <strong>Integrado</strong> 360</p>
-        <p class="footer-claim">“La evolución de la salud y seguridad”</p>
+        <p class="footer-claim">"La evolución de la salud y seguridad"</p>
       </div>
       <div class="footer-logos">
         <img src="assets/img/logo-ohs.png" alt="OHS Centro Médico" width="716" height="358" loading="lazy" />
         <img src="assets/img/logo-renee.png" alt="Grupo Renee" width="855" height="339" loading="lazy" />
       </div>
 
+      <div class="footer-social-section">
+        <div class="footer-social-col">
+          <h4>OHS Centro Médico</h4>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/share/1KiGc3uQm6/?mibextid=wwXIfr" target="_blank" rel="noopener"
+              aria-label="Facebook OHS">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/centromedico_ohs?igsh=dnZ5N3U3dGNtNzhu" target="_blank" rel="noopener"
+              aria-label="Instagram OHS">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/centro-m%C3%A9dico-ohs-45673b123/" target="_blank" rel="noopener"
+              aria-label="LinkedIn OHS">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@CentroMedico_OHS/featured" target="_blank" rel="noopener"
+              aria-label="YouTube OHS">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-social-col">
+          <h4>Grupo Renee</h4>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/share/14eQuZJYQS2/?mibextid=wwXIf" target="_blank" rel="noopener"
+              aria-label="Facebook Grupo Renee">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/grupo_renee?igsh=ZjVkb3Bjemh2Ynd6" target="_blank" rel="noopener"
+              aria-label="Instagram Grupo Renee">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/grupo-renee/" target="_blank" rel="noopener"
+              aria-label="LinkedIn Grupo Renee">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@grureneesas.a.1385" target="_blank" rel="noopener"
+              aria-label="YouTube Grupo Renee">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
       <p class="footer-legal">© <span id="year"></span> Centro Integrado 360 · OHS Centro Médico &amp; Grupo Renee.
         Todos los derechos reservados.</p>
     </div>
@@ -614,7 +668,6 @@
 
   <!-- ===================== FAQ CHATBOX ===================== -->
   <div class="faq-chatbox" id="faqChatbox">
-    <!-- Bubble Trigger -->
     <button class="chatbox-trigger" id="chatboxTrigger" aria-label="Abrir chat de preguntas frecuentes"
       aria-expanded="false" aria-controls="chatboxWindow">
       <span class="chatbox-trigger-badge" id="chatboxBadge">1</span>
@@ -629,13 +682,11 @@
       </svg>
     </button>
 
-    <!-- Welcome Tooltip Banner -->
     <div class="chatbox-tooltip" id="chatboxTooltip">
       <p>¿Tienes preguntas? ¡Chatea con nosotros!</p>
       <button class="tooltip-close" id="tooltipClose" aria-label="Cerrar sugerencia">✕</button>
     </div>
 
-    <!-- Chat Window -->
     <div class="chatbox-window" id="chatboxWindow" aria-hidden="true">
       <div class="chatbox-header">
         <div class="chatbox-header-info">
@@ -657,9 +708,7 @@
         </button>
       </div>
 
-      <div class="chatbox-messages" id="chatboxMessages">
-        <!-- Los mensajes se inyectan dinámicamente -->
-      </div>
+      <div class="chatbox-messages" id="chatboxMessages"></div>
 
       <div class="chatbox-quick-replies" id="chatboxQuickReplies">
         <button class="quick-reply-btn" data-question="servicios">¿Qué servicios ofrecen?</button>

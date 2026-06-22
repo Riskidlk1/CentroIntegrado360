@@ -566,6 +566,18 @@
   var slides = document.querySelectorAll("#sliderTrack .slide");
   var prevBtn = document.getElementById("prevSlideBtn");
   var nextBtn = document.getElementById("nextSlideBtn");
+
+  // Generar dots dinámicamente según la cantidad de slides reales
+  var dotsContainer = document.getElementById("sliderDots");
+  if (dotsContainer && slides.length > 0) {
+    dotsContainer.innerHTML = "";
+    for (var i = 0; i < slides.length; i++) {
+      var span = document.createElement("span");
+      span.className = "dot" + (i === 0 ? " active" : "");
+      span.setAttribute("data-index", i);
+      dotsContainer.appendChild(span);
+    }
+  }
   var dots = document.querySelectorAll("#sliderDots .dot");
 
   if (homeSlider && sliderTrack && slides.length > 0) {

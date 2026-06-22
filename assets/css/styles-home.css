@@ -1,0 +1,742 @@
+/* =========================================================
+   CENTRO INTEGRADO 360 — styles-home.css
+   Estilos exclusivos para index.html (homepage)
+   ========================================================= */
+
+/* ===================== SLIDER / BANNER ===================== */
+
+.home-banner {
+    width: 100%;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+    line-height: 0;
+    height: auto !important;
+}
+
+.slider-wrapper:active {
+    cursor: grabbing;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    height: auto !important;
+}
+
+.slide {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+    line-height: 0 !important;
+    height: auto !important;
+    overflow: hidden !important;
+}
+
+.slide img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 560px !important;
+    object-fit: contain !important;
+    background-color: #000;
+    display: block !important;
+    pointer-events: none;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(19, 66, 149, 0.7);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 10;
+    transition: background 0.3s, transform 0.2s, opacity 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0.85;
+}
+
+.slider-btn:hover {
+    background: var(--naranja);
+    color: var(--negro);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.prev-btn {
+    left: 16px;
+}
+
+.next-btn {
+    right: 16px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, width 0.3s;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.dot.active {
+    background: var(--naranja);
+    width: 26px;
+    border-radius: 5px;
+}
+
+/* ===================== SECCIÓN FUERZA — HALFTONE ===================== */
+
+.fuerza {
+    background: var(--blanco);
+    padding: var(--sp-6) 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.fuerza::before,
+.fuerza::after {
+    content: none;
+}
+
+.fuerza-halftone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.fuerza-halftone-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 320px;
+    background-image: radial-gradient(circle, var(--naranja) 22%, transparent 23%);
+    background-size: 18px 18px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 85% at 0% 0%, #000 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse 85% 85% at 0% 0%, #000 30%, transparent 75%);
+    opacity: 0.55;
+}
+
+.fuerza-halftone-tr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    background-image: radial-gradient(circle, var(--azul) 22%, transparent 23%);
+    background-size: 18px 18px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 85% at 100% 0%, #000 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse 85% 85% at 100% 0%, #000 30%, transparent 75%);
+    opacity: 0.18;
+}
+
+.fuerza-halftone-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 220px;
+    background-image: radial-gradient(circle, var(--naranja) 22%, transparent 23%);
+    background-size: 14px 14px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 85% at 0% 100%, #000 20%, transparent 70%);
+    mask-image: radial-gradient(ellipse 85% 85% at 0% 100%, #000 20%, transparent 70%);
+    opacity: 0.3;
+}
+
+.fuerza-halftone-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+    height: 260px;
+    background-image: radial-gradient(circle, var(--naranja) 22%, transparent 23%);
+    background-size: 16px 16px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 85% at 100% 100%, #000 25%, transparent 72%);
+    mask-image: radial-gradient(ellipse 85% 85% at 100% 100%, #000 25%, transparent 72%);
+    opacity: 0.45;
+}
+
+.fuerza-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.fuerza-inner .section-kicker {
+    color: var(--naranja-600);
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+}
+
+.fuerza-inner .section-title {
+    font-size: var(--fs-2xl);
+    color: var(--azul-900);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: var(--sp-3);
+    max-width: none;
+}
+
+.fuerza-logos-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: var(--sp-3) 0 var(--sp-3);
+    flex-wrap: wrap;
+}
+
+.brand-logo-img {
+    max-height: 72px;
+    width: auto;
+    object-fit: contain;
+}
+
+.fuerza-x {
+    font-size: 2rem;
+    color: var(--azul-900);
+    font-weight: 400;
+    opacity: 0.6;
+    font-family: var(--font-display);
+}
+
+.fuerza-foot {
+    font-size: var(--fs-lg);
+    color: var(--azul-900);
+    font-weight: 600;
+    margin: 0.5rem 0 0;
+    font-style: italic;
+}
+
+.fuerza-foot span {
+    color: var(--naranja);
+    font-weight: 700;
+}
+
+/* ===================== REDES SOCIALES — SECCIÓN COMPACTA ===================== */
+
+.social-blue-section {
+    background: var(--azul-900);
+    color: var(--blanco);
+    padding: 2.5rem 0;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1.75rem;
+    color: var(--blanco);
+    font-family: var(--font-display);
+}
+
+.social-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.social-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    text-align: center;
+}
+
+.social-col h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-body);
+    letter-spacing: 0.02em;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--blanco);
+    transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+    flex-shrink: 0;
+}
+
+.social-links a:hover {
+    color: var(--naranja);
+    transform: translateY(-2px) scale(1.1);
+}
+
+.social-links a svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* ===================== FOOTER SOCIAL — FIX ALINEACIÓN ===================== */
+
+.footer-social-section {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: var(--sp-4);
+    margin-bottom: var(--sp-3);
+    padding-top: var(--sp-4);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+}
+
+.footer-social-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-social-col h4 {
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    color: var(--naranja);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.footer-social-links a:hover {
+    color: var(--blanco);
+    transform: translateY(-3px);
+}
+
+.footer-social-links a svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media (max-width: 768px) {
+    .slide img {
+        max-height: 320px;
+        object-position: center center;
+    }
+
+    .fuerza-halftone-tl,
+    .fuerza-halftone-tr,
+    .fuerza-halftone-bl,
+    .fuerza-halftone-br {
+        width: 160px;
+        height: 160px;
+    }
+
+    .fuerza-logos-wrap {
+        gap: 1.5rem;
+    }
+
+    .brand-logo-img {
+        max-height: 52px;
+    }
+
+    .social-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .social-title {
+        font-size: 1.25rem;
+    }
+
+    .footer-social-section {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        max-height: 240px;
+    }
+
+    .prev-btn {
+        left: 8px;
+    }
+
+    .next-btn {
+        right: 8px;
+    }
+
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+/* ===================== RISK ICONS — ESTILO MEJORADO ===================== */
+
+.risks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.risk-item {
+    background: var(--blanco);
+    border: 1.5px solid var(--gris-200, #e2e8f0);
+    border-radius: 14px;
+    padding: 1.25rem 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 2px 8px rgba(19, 66, 149, 0.06);
+    cursor: default;
+}
+
+.risk-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(19, 66, 149, 0.14);
+    border-color: var(--azul);
+}
+
+.risk-icon-wrap {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.risk-icon-wrap svg,
+.risk-icon-wrap img {
+    width: 56px;
+    height: 56px;
+    display: block;
+    object-fit: contain;
+}
+
+.risk-item span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--azul);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+    .risks-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+    }
+
+    .risk-icon-wrap {
+        width: 48px;
+        height: 48px;
+    }
+
+    .risk-icon-wrap svg,
+    .risk-icon-wrap img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+    }
+
+    .risk-item {
+        padding: 0.9rem 0.5rem 0.75rem;
+    }
+
+    .risk-item span {
+        font-size: 0.7rem;
+    }
+}
+
+/* ===================== ¿QUÉ SOLUCIONAMOS? — COMPACTAR ===================== */
+
+.solucionamos-nueva {
+    background: var(--blanco) !important;
+    padding: var(--sp-6) 0 !important;
+}
+
+.solucionamos-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--sp-5) !important;
+    align-items: start !important;
+}
+
+@media (max-width: 991px) {
+    .solucionamos-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--sp-4) !important;
+    }
+}
+
+.sol-left {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+}
+
+.sol-title {
+    color: var(--naranja) !important;
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 0 !important;
+}
+
+.sol-desc {
+    font-size: var(--fs-base) !important;
+    line-height: 1.8 !important;
+    margin: 0 !important;
+    color: var(--gris-700) !important;
+}
+
+.sol-subtitle {
+    font-size: var(--fs-lg) !important;
+    font-weight: 700 !important;
+    color: var(--azul-900) !important;
+    margin: 0 !important;
+}
+
+.risks-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.25rem !important;
+}
+
+.risk-item {
+    background: var(--blanco) !important;
+    border: 1px solid var(--gris-200) !important;
+    border-radius: var(--radius) !important;
+    padding: 1.25rem 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    text-align: center !important;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.risk-item:hover {
+    transform: translateY(-2px) !important;
+    background: var(--azul-050) !important;
+    border-color: var(--azul-200) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.risk-icon-wrap {
+    width: 56px !important;
+    height: 56px !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    display: grid !important;
+    place-items: center !important;
+    color: var(--azul) !important;
+}
+
+.risk-icon-wrap svg,
+.risk-icon-wrap img {
+    width: 52px !important;
+    height: 52px !important;
+    object-fit: contain !important;
+}
+
+.risk-item span {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: var(--azul-900) !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.btn-sol-cta {
+    margin-top: 1rem !important;
+    background: var(--naranja) !important;
+    color: var(--negro) !important;
+    width: fit-content !important;
+}
+
+.btn-sol-cta:hover {
+    background: var(--naranja-600) !important;
+}
+
+.sol-right-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+}
+
+.sol-list-items {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+}
+
+.sol-list-card {
+    background: var(--blanco) !important;
+    border: 1px solid var(--gris-200) !important;
+    border-radius: 14px !important;
+    padding: 1.1rem 1.5rem !important;
+    font-size: var(--fs-sm) !important;
+    color: var(--azul-900) !important;
+    font-weight: 600 !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+    box-shadow: var(--shadow-sm) !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.sol-list-card:hover {
+    border-color: var(--azul) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.sol-list-card--orange {
+    background: var(--naranja) !important;
+    color: var(--blanco) !important;
+    border-color: var(--naranja) !important;
+    justify-content: space-between !important;
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2) !important;
+}
+
+.sol-list-card--orange:hover {
+    background: var(--naranja-600) !important;
+    border-color: var(--naranja-600) !important;
+}
+
+/* ===================== PARTICULARES BANNER — ELIMINAR ESPACIO BLANCO ===================== */
+
+.solucionamos-nueva+.particulares-banner,
+.particulares-banner {
+    margin-top: 0;
+}
+
+.section.solucionamos-nueva {
+    padding-bottom: var(--sp-4);
+}
+
+
+/* ===================== BANNER OVERRIDES FOR RESPONSIVE ===================== */
+@media (max-width: 980px) {
+
+    .home-banner,
+    .slider-wrapper,
+    .slider-track,
+    .slide {
+        height: auto !important;
+    }
+
+    .slide img {
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .home-banner,
+    .slider-wrapper,
+    .slider-track,
+    .slide {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .home-banner,
+    .slider-wrapper,
+    .slider-track,
+    .slide {
+        height: auto !important;
+    }
+}

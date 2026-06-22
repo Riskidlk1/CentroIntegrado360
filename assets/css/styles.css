@@ -1937,8 +1937,8 @@ a.eco-card:focus-visible,
   width: 100%;
   height: 100%;
   background: url('../img/Homepage/dotted-fading-background-curved-lines_78370-1819.jpg.jpeg') no-repeat center center;
-  background-size: cover;
-  opacity: 0.05;
+  background-size: 100% 100%;
+  opacity: 0.12;
   pointer-events: none;
   z-index: 1;
 }
@@ -1950,8 +1950,8 @@ a.eco-card:focus-visible,
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 10% 50%, rgba(19, 66, 149, 0.08), transparent 45%),
-    radial-gradient(circle at 90% 50%, rgba(249, 115, 22, 0.08), transparent 45%);
+    radial-gradient(circle at 10% 50%, rgba(249, 115, 22, 0.08), transparent 45%),
+    radial-gradient(circle at 90% 50%, rgba(19, 66, 149, 0.08), transparent 45%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1972,15 +1972,17 @@ a.eco-card:focus-visible,
   flex-wrap: wrap;
 }
 .brand-logo-img {
-  max-height: 80px;
+  max-height: 70px;
   width: auto;
   object-fit: contain;
 }
 .fuerza-x {
-  font-size: var(--fs-xl);
+  font-size: 1.5rem;
   color: var(--azul-900);
   font-weight: 300;
+  opacity: 0.7;
 }
+
 .fuerza-foot {
   font-size: var(--fs-lg);
   color: var(--azul-900);
@@ -1991,8 +1993,6 @@ a.eco-card:focus-visible,
   color: var(--naranja);
   font-weight: 700;
 }
-
-/* Rediseño Servicios */
 .servicios {
   background: var(--azul-900);
   color: var(--blanco);
@@ -2079,14 +2079,13 @@ a.eco-card:focus-visible,
 .btn-more--blue {
   color: var(--naranja);
 }
+
 .btn-more--orange {
   color: var(--naranja);
 }
 .btn-more:hover {
   transform: translateX(3px);
 }
-
-/* Nuevos Botones de Servicios en Cápsula */
 .btn-services-blue {
   background: #134295;
   color: var(--blanco);
@@ -2118,11 +2117,19 @@ a.eco-card:focus-visible,
   width: fit-content;
   transition: background 0.2s, transform 0.2s;
 }
+
+
 .btn-services-orange:hover {
   background: var(--naranja-600);
   transform: translateY(-2px);
   color: var(--blanco);
 }
+
+
+
+
+
+
 
 
 .serv-card-media {
@@ -2133,19 +2140,14 @@ a.eco-card:focus-visible,
   align-self: stretch;
 }
 
-
-
-
 .serv-card-media img {
-  height: 370px;
+  height: 350px;
   width: auto;
-  max-width: 140%;
+  max-width: 125%;
   object-fit: contain;
   object-position: bottom right;
   display: block;
 }
-
-/* Rediseño ¿Qué Solucionamos? */
 .solucionamos-nueva {
   background: var(--blanco);
   padding: var(--sp-6) 0;
