@@ -687,9 +687,138 @@
     box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2) !important;
 }
 
-.sol-list-card--orange:hover {
-    background: var(--naranja-600) !important;
-    border-color: var(--naranja-600) !important;
+
+
+
+
+/* ===================== FIX SERV-CARD IMAGEN COMPLETA ===================== */
+
+.serv-card {
+    position: relative !important;
+    overflow: visible !important;
+    align-items: end !important;
+    min-height: 320px !important;
+}
+
+.serv-card-content {
+    position: relative !important;
+    z-index: 2 !important;
+    padding-bottom: var(--sp-4) !important;
+    align-self: center !important;
+}
+
+.serv-card-media {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 45% !important;
+    height: 120% !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-end !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.serv-card-media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: bottom right !important;
+    display: block !important;
+    max-width: none !important;
+}
+
+@media (max-width: 991px) {
+    .serv-card {
+        overflow: hidden !important;
+        min-height: unset !important;
+    }
+
+    .serv-card-media {
+        position: relative !important;
+        bottom: unset !important;
+        right: unset !important;
+        width: 100% !important;
+        height: 220px !important;
+        justify-content: center !important;
+        pointer-events: auto !important;
+    }
+
+    .serv-card-media img {
+        height: 100% !important;
+        width: auto !important;
+        object-position: bottom center !important;
+    }
+}
+
+/* ===================== FIX TAMAÑO SERV-CARD COMPACTO ===================== */
+
+.servicios {
+    padding: var(--sp-4) 0 !important;
+}
+
+.serv-card {
+    min-height: unset !important;
+    padding: 1.5rem 1.5rem 0 1.5rem !important;
+}
+
+.serv-card h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.serv-card ul li {
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+}
+
+.serv-card ul {
+    gap: 0.3rem !important;
+}
+
+.serv-card-content {
+    gap: 0.75rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.btn-services-blue,
+.btn-services-orange {
+    padding: 0.5rem 1.2rem !important;
+    font-size: 0.82rem !important;
+}
+
+.serv-lead-desc {
+    font-size: 0.9rem !important;
+    margin-bottom: var(--sp-3) !important;
+}
+
+/* ===================== FIX SERVICIOS HEADER ALINEACIÓN ===================== */
+
+.servicios {
+    padding: var(--sp-5) 0 var(--sp-4) 0 !important;
+}
+
+.servicios .section-kicker {
+    text-align: left !important;
+    color: var(--naranja) !important;
+    margin-bottom: 0.4rem !important;
+}
+
+.serv-lead-desc {
+    text-align: left !important;
+    margin: 0 0 var(--sp-3) 0 !important;
+    max-width: 100% !important;
+    font-size: var(--fs-sm) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.servicios .section-kicker {
+    font-size: 1.4rem !important;
+    letter-spacing: 0.08em !important;
 }
 
 /* ===================== PARTICULARES BANNER — ELIMINAR ESPACIO BLANCO ===================== */
