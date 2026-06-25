@@ -37,7 +37,7 @@
   .site-header.nav-open .main-nav {
     display: flex; position: absolute; top: var(--header-h); left: 0; right: 0;
     flex-direction: column; gap: 0; background: var(--blanco);
-    box-shadow: var(--shadow-md); padding: .5rem 0;
+    box-shadow: none; padding: .5rem 0 2.5rem;
   }
   .site-header.nav-open .main-nav a {
     padding: .9rem 1.6rem;
@@ -54,8 +54,9 @@
     color: var(--gris-700) !important;
   }
   .site-header.nav-open .header-cta {
-    display: flex; position: absolute; top: calc(var(--header-h) + 290px); left: 0; right: 0;
-    flex-direction: column; gap: .6rem; padding: 1rem 1.6rem; background: var(--blanco);
+    display: flex; position: absolute; top: calc(var(--header-h) + 325px); left: 0; right: 0;
+    flex-direction: column; gap: .6rem; padding: 1rem 1.6rem 1.5rem; background: var(--blanco);
+    box-shadow: var(--shadow-md);
   }
   .site-header.nav-open .header-cta .btn {
     width: 100% !important;

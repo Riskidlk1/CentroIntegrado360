@@ -1911,7 +1911,7 @@ a.eco-card:focus-visible,
 
 /* ---------------- Footer ---------------- */
 .site-footer {
-  background: var(--negro);
+  background: var(--azul-900);
   color: var(--blanco);
   padding: var(--sp-6) 0 var(--sp-4);
   position: relative;
