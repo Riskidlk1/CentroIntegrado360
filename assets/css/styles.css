@@ -1914,81 +1914,280 @@ a.eco-card:focus-visible,
 /* ---------------- Footer ---------------- */
 .site-footer {
   background: var(--degradado-azul);
-  background-attachment: fixed;
   color: var(--blanco);
-  padding: var(--sp-6) 0 var(--sp-4);
+  padding: 4rem 0 2rem;
   position: relative;
   overflow: hidden;
+  font-family: var(--font-body), sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-dots {
   color: var(--naranja);
-  opacity: .25;
+  opacity: .15;
   width: 300px;
   height: 200px;
+  position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
   -webkit-mask-image: radial-gradient(circle at top left, #000 20%, transparent 70%);
   mask-image: radial-gradient(circle at top left, #000 20%, transparent 70%);
 }
 
-.footer-inner {
+.footer-grid-container {
   display: grid;
-  gap: var(--sp-4);
+  grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
   position: relative;
+  z-index: 2;
+  width: min(100% - 2.5rem, 1400px) !important;
+  max-width: 1400px !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer-brand {
+.footer-col {
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: 1.25rem;
+}
+
+.footer-col-brand {
+  gap: 1rem;
 }
 
 .footer-logo-main {
   height: 180px;
   width: auto;
   align-self: flex-start;
-  margin-top: -50px;
-  margin-bottom: -50px;
+  margin-top: -30px;
+  margin-bottom: -20px;
 }
 
-.brand-360--lg {
-  font-size: 2.6rem;
-  color: var(--naranja);
-}
-
-.footer-brand p {
+.footer-slogan {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  line-height: 1.4;
   margin: 0;
+  max-width: 30ch;
+}
+
+.footer-contact-info {
+  margin-top: 0.5rem;
+}
+
+.footer-sub-title {
   font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--naranja);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
 }
 
-.footer-claim {
-  font-style: italic;
-  color: var(--gris-300);
-  font-family: var(--font-body) !important;
-}
-
-.footer-logos {
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: var(--sp-3);
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.footer-logos img {
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+.footer-contact-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--naranja);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.footer-contact-list a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-list a:hover {
+  color: var(--blanco);
+}
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--blanco);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: var(--naranja);
+  padding-left: 4px;
+}
+
+.footer-col-social {
+  gap: 1.5rem;
+}
+
+.footer-social-brands {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-brand-social-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-brand-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social-icons a {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.footer-social-icons a svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+.footer-social-icons a[fill="none"] svg {
+  fill: none;
+  stroke: currentColor;
+}
+
+.footer-social-icons a:hover {
+  background: var(--degradado-azul);
+  border-color: transparent;
+  color: var(--blanco);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(19, 66, 149, 0.3);
+}
+
+.footer-logos-alliance {
+  margin-top: 0.5rem;
+}
+
+.footer-logos-images {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.footer-logos-images img {
   height: 48px;
   width: auto;
-  background: var(--blanco);
-  padding: 8px 12px;
-  border-radius: 10px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.footer-logos-images img:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+  width: min(100% - 2.5rem, 1400px) !important;
+  max-width: 1400px !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-legal {
-  color: var(--gris-500);
-  font-size: var(--fs-xs);
-  border-top: 1px solid rgba(255, 255, 255, .12);
-  padding-top: var(--sp-3);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.75rem;
   margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .footer-grid-container {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 3rem 0 1.5rem;
+  }
+  .footer-logo-main {
+    height: 120px;
+    margin-top: -20px;
+    margin-bottom: -15px;
+  }
+  .footer-slogan {
+    font-size: 1rem;
+  }
 }
 
 /* ---------------- Animaciones de entrada ---------------- */

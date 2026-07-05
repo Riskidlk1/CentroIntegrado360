@@ -9,7 +9,7 @@
    ========================================================= */
 .nos-hero {
   padding: calc(var(--header-h) + var(--sp-4)) 0 var(--sp-5);
-  background: var(--gris-050);
+  background: #faf8f5;
   position: relative;
   overflow: hidden;
 }
@@ -18,8 +18,10 @@
 .nos-hero::before {
   content: "";
   position: absolute;
-  top: 0; right: 0;
-  width: 280px; height: 280px;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 280px;
   background-image: radial-gradient(var(--naranja) 22%, transparent 23%);
   background-size: 14px 14px;
   opacity: .18;
@@ -44,7 +46,9 @@
   gap: 1.1rem;
 }
 
-.nos-kicker { margin-bottom: 0; }
+.nos-kicker {
+  margin-bottom: 0;
+}
 
 .nos-hero-title {
   font-family: var(--font-display);
@@ -95,18 +99,24 @@
   opacity: .5;
 }
 
-.nos-cta { align-self: flex-start; margin-top: .5rem; }
+.nos-cta {
+  align-self: flex-start;
+  margin-top: .5rem;
+}
 
 /* Foto */
 .nos-hero-fig {
   margin: 0;
   position: relative;
   border-radius: 0 !important;
-  overflow: visible;           /* Permite que el badge salga fuera de la foto */
-  box-shadow: var(--shadow-lg);
+  overflow: visible;
+  /* Permite que el badge salga fuera de la foto */
+  box-shadow: none !important;
   width: 100%;
   aspect-ratio: 1.25;
-  justify-self: end;           /* Empuja la foto hacia la derecha del grid */
+  justify-self: end;
+  /* Empuja la foto hacia la derecha del grid */
+  background: #ffffff !important;
 }
 
 /* El recorte de la imagen se aplica en el elemento img directamente */
@@ -119,7 +129,8 @@
 
 .nos-hero-badge {
   position: absolute;
-  left: -60px;          /* Sale hacia la izquierda, fuera del borde de la foto */
+  left: -60px;
+  /* Sale hacia la izquierda, fuera del borde de la foto */
   bottom: 28px;
   background: #1e2b85;
   color: var(--blanco);
@@ -144,7 +155,9 @@
 /* =========================================================
    MISIÓN / VISIÓN / VALORES — 3 tarjetas
    ========================================================= */
-.nos-mvv { background: #faf8f5 !important; }
+.nos-mvv {
+  background: #faf8f5 !important;
+}
 
 .nos-mvv-grid {
   display: grid;
@@ -372,7 +385,8 @@
   font-weight: 800;
   font-size: 2.5rem !important;
   line-height: 1;
-  color: #d1dced !important; /* Gris-azul claro como el boceto */
+  color: #d1dced !important;
+  /* Gris-azul claro como el boceto */
   flex-shrink: 0;
   margin-top: -2px;
 }
@@ -440,5 +454,3 @@
   transform: translateY(-2px) !important;
   box-shadow: var(--shadow-md) !important;
 }
-
-
