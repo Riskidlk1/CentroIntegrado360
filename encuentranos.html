@@ -34,14 +34,16 @@
       top: 0 !important;
       z-index: 100 !important;
       background: linear-gradient(135deg, #0c2c66, #134295) !important;
-      border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
+
     .site-header .header-inner {
       display: flex !important;
       align-items: center !important;
       gap: 1.5rem !important;
       height: 76px !important;
     }
+
     .site-header .brand-360 {
       font-family: "Garet", "Poppins", system-ui, sans-serif !important;
       font-weight: 800 !important;
@@ -51,18 +53,24 @@
       letter-spacing: -.02em !important;
       line-height: 1 !important;
     }
+
     .site-header .brand-text {
       font-size: 0.72rem !important;
       color: #ffffff !important;
       text-transform: uppercase !important;
       letter-spacing: .12em !important;
     }
-    .site-header .brand-text strong { color: #fe9f12 !important; }
+
+    .site-header .brand-text strong {
+      color: #fe9f12 !important;
+    }
+
     .site-header .main-nav {
       display: flex !important;
       align-items: center !important;
       gap: 1.6rem !important;
     }
+
     .site-header .main-nav a {
       font-size: 0.9375rem !important;
       font-weight: 500 !important;
@@ -70,16 +78,25 @@
       padding: .4rem 0 !important;
       text-decoration: none !important;
     }
-    .site-header .main-nav a:hover { color: #fe9f12 !important; }
+
+    .site-header .main-nav a:hover {
+      color: #fe9f12 !important;
+    }
+
     .site-header .main-nav a.active {
       color: #fe9f12 !important;
       font-weight: 600 !important;
     }
+
     .site-header .dropdown-trigger .arrow-down {
       font-size: 9px !important;
       color: #ffffff !important;
     }
-    .site-header .main-nav a.active .arrow-down { color: #fe9f12 !important; }
+
+    .site-header .main-nav a.active .arrow-down {
+      color: #fe9f12 !important;
+    }
+
     .site-header .dropdown-menu {
       position: absolute !important;
       top: calc(100% + 14px) !important;
@@ -87,7 +104,7 @@
       transform: translateX(-50%) translateY(10px) !important;
       background: #fff !important;
       border-radius: 12px !important;
-      box-shadow: 0 14px 40px rgba(12,44,102,.14) !important;
+      box-shadow: 0 14px 40px rgba(12, 44, 102, .14) !important;
       padding: .7rem 0 !important;
       min-width: 190px !important;
       opacity: 0 !important;
@@ -95,12 +112,14 @@
       transition: opacity .25s, transform .25s, visibility .25s !important;
       z-index: 1000 !important;
     }
+
     .site-header .nav-item-dropdown:hover .dropdown-menu,
     .site-header .nav-item-dropdown:focus-within .dropdown-menu {
       opacity: 1 !important;
       visibility: visible !important;
       transform: translateX(-50%) translateY(0) !important;
     }
+
     .site-header .dropdown-menu a {
       display: block !important;
       padding: .65rem 1.25rem !important;
@@ -108,23 +127,33 @@
       font-size: 0.84rem !important;
       font-weight: 500 !important;
     }
-    .site-header .dropdown-menu a:hover { background: #f6f8fc !important; color: #134295 !important; }
+
+    .site-header .dropdown-menu a:hover {
+      background: #f6f8fc !important;
+      color: #134295 !important;
+    }
+
     .site-header .search-trigger-btn {
       background: none !important;
       border: none !important;
       color: #ffffff !important;
       cursor: pointer !important;
     }
-    .site-header .search-trigger-btn:hover { color: #fe9f12 !important; }
+
+    .site-header .search-trigger-btn:hover {
+      color: #fe9f12 !important;
+    }
+
     .site-header .header-cta {
       display: flex !important;
       gap: .6rem !important;
       align-items: center !important;
     }
+
     .site-header .header-cta .btn,
     .site-header .header-cta .btn-primary,
     .site-header .header-cta .btn-ghost {
-      border: 1px solid rgba(255,255,255,0.65) !important;
+      border: 1px solid rgba(255, 255, 255, 0.65) !important;
       background: transparent !important;
       color: #ffffff !important;
       font-size: 0.72rem !important;
@@ -142,45 +171,63 @@
       box-shadow: none !important;
       transform: none !important;
     }
+
     .site-header .header-cta .btn:hover,
     .site-header .header-cta .btn-primary:hover,
     .site-header .header-cta .btn-ghost:hover {
-      background: rgba(255,255,255,0.1) !important;
+      background: rgba(255, 255, 255, 0.1) !important;
       border-color: #ffffff !important;
       color: #fe9f12 !important;
       transform: translateY(-2px) !important;
       box-shadow: none !important;
     }
+
     @media (max-width: 980px) {
-      .site-header .main-nav, .site-header .header-cta { display: none !important; }
-      .site-header .nav-toggle { display: flex !important; }
+
+      .site-header .main-nav,
+      .site-header .header-cta {
+        display: none !important;
+      }
+
+      .site-header .nav-toggle {
+        display: flex !important;
+      }
+
       .site-header.nav-open .main-nav {
         display: flex !important;
         position: absolute !important;
         top: 76px !important;
-        left: 0 !important; right: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
         flex-direction: column !important;
         background: #fff !important;
-        box-shadow: 0 14px 40px rgba(12,44,102,.14) !important;
+        box-shadow: 0 14px 40px rgba(12, 44, 102, .14) !important;
         padding: .5rem 0 !important;
         gap: 0 !important;
       }
+
       .site-header.nav-open .main-nav a {
         padding: .9rem 1.6rem !important;
         border-bottom: 1px solid #eef2f8 !important;
         color: #3a4a66 !important;
       }
-      .site-header.nav-open .main-nav a.active { color: #fe9f12 !important; }
+
+      .site-header.nav-open .main-nav a.active {
+        color: #fe9f12 !important;
+      }
+
       .site-header.nav-open .header-cta {
         display: flex !important;
         position: absolute !important;
         top: calc(76px + 290px) !important;
-        left: 0 !important; right: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
         flex-direction: column !important;
         gap: .6rem !important;
         padding: 1rem 1.6rem !important;
         background: #fff !important;
       }
+
       .site-header.nav-open .header-cta .btn,
       .site-header.nav-open .header-cta .btn-primary,
       .site-header.nav-open .header-cta .btn-ghost {
@@ -202,14 +249,17 @@
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
   <!-- ===================== HEADER ===================== -->
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Centro Integrado 360 - inicio">
-        <span class="brand-360">360</span>
-        <span class="brand-text">Centro <strong>Integrado</strong></span>
+        <img src="assets/img/Iconos/logo horizontal.svg" alt="Centro Integrado 360" class="brand-logo-img" />
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+
+
 
         <div class="nav-item-dropdown">
           <a href="index.html" class="dropdown-trigger">Inicio</a>
@@ -358,28 +408,32 @@
 
                 <ul class="enc-info-list">
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Dirección</strong>
                       <p>Av. de las Aguas, Urbanor<br>Junto a la Universidad UIDE<br>Guayaquil, Ecuador</p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/horario.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/horario.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Horarios</strong>
                       <p>Lun – Vie: <b>07:00 – 19:00</b><br>Sábados: <b>07:00 – 14:00</b></p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>WhatsApp</strong>
                       <p><a href="https://wa.me/593992602555" target="_blank" rel="noopener">099 260 2555</a></p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Correo</strong>
                       <p><a href="mailto:ventas@ohs.com.ec">ventas@ohs.com.ec</a></p>
@@ -388,7 +442,8 @@
                 </ul>
 
                 <a href="https://wa.me/593992602555" target="_blank" rel="noopener" class="btn btn-primary enc-btn-wa">
-                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita por WhatsApp
+                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita
+                  por WhatsApp
                 </a>
                 <a href="https://maps.app.goo.gl/QoqxAo6acwrhqMrz9" target="_blank" rel="noopener"
                   class="enc-link-maps">
@@ -424,21 +479,24 @@
 
                 <ul class="enc-info-list">
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Dirección</strong>
                       <p>Mucho Lote 1<br>Plaza comercial, locales 5–8 y 11<br>Guayaquil, Ecuador</p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>WhatsApp</strong>
                       <p><a href="https://wa.me/593992602555" target="_blank" rel="noopener">099 260 2555</a></p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Correo</strong>
                       <p><a href="mailto:ventas@ohs.com.ec">ventas@ohs.com.ec</a></p>
@@ -447,7 +505,8 @@
                 </ul>
 
                 <a href="https://wa.me/593992602555" target="_blank" rel="noopener" class="btn btn-primary enc-btn-wa">
-                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita por WhatsApp
+                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita
+                  por WhatsApp
                 </a>
                 <a href="https://maps.google.com/maps?q=Mucho+Lote+Guayaquil+Ecuador" target="_blank" rel="noopener"
                   class="enc-link-maps">
@@ -481,21 +540,24 @@
 
                 <ul class="enc-info-list">
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Dirección</strong>
                       <p>Av. de la Prensa y Vaca de Castro<br>Quito, Ecuador</p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>WhatsApp</strong>
                       <p><a href="https://wa.me/593992602555" target="_blank" rel="noopener">099 260 2555</a></p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Correo</strong>
                       <p><a href="mailto:ventas@ohs.com.ec">ventas@ohs.com.ec</a></p>
@@ -504,7 +566,8 @@
                 </ul>
 
                 <a href="https://wa.me/593992602555" target="_blank" rel="noopener" class="btn btn-primary enc-btn-wa">
-                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita por WhatsApp
+                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita
+                  por WhatsApp
                 </a>
                 <a href="https://maps.google.com/maps?q=Av+de+la+Prensa+Vaca+de+Castro+Quito+Ecuador" target="_blank"
                   rel="noopener" class="enc-link-maps">
@@ -539,21 +602,24 @@
 
                 <ul class="enc-info-list">
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/direccion.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Dirección</strong>
                       <p>Av. Flavio Reyes<br>Edificio Platinum<br>Manta, Ecuador</p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/whatsapp.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>WhatsApp</strong>
                       <p><a href="https://wa.me/593992602555" target="_blank" rel="noopener">099 260 2555</a></p>
                     </div>
                   </li>
                   <li>
-                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg" alt="" loading="lazy" /></span>
+                    <span class="enc-info-icon" aria-hidden="true"><img src="assets/img/Iconos/formulario/correo.svg"
+                        alt="" loading="lazy" /></span>
                     <div>
                       <strong>Correo</strong>
                       <p><a href="mailto:ventas@ohs.com.ec">ventas@ohs.com.ec</a></p>
@@ -562,7 +628,8 @@
                 </ul>
 
                 <a href="https://wa.me/593992602555" target="_blank" rel="noopener" class="btn btn-primary enc-btn-wa">
-                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita por WhatsApp
+                  <img src="assets/img/Iconos/formulario/whatsapp.svg" alt="" class="enc-btn-wa-icon" /> Agendar cita
+                  por WhatsApp
                 </a>
                 <a href="https://maps.google.com/maps?q=Av+Flavio+Reyes+Edificio+Platinum+Manta+Ecuador" target="_blank"
                   rel="noopener" class="enc-link-maps">
@@ -613,29 +680,38 @@
           <div class="social-links">
             <a href="https://wa.me/593992602555" target="_blank" rel="noopener" aria-label="WhatsApp OHS">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966a9.78 9.78 0 0 0-6.975-2.881c-5.433 0-9.86 4.371-9.864 9.8-.001 1.73.457 3.414 1.32 4.9l-.317 1.157 1.218-.32 1.019.598zm9.718-6.938c-.3-.15-1.771-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.776.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.49-.893-.797-1.496-1.782-1.672-2.08-.175-.3-.018-.462.158-.636.159-.156.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.233-.243-.586-.492-.507-.676-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.11 4.52.714.31 1.27.494 1.704.632.717.228 1.37.196 1.885.119.574-.086 1.771-.725 2.021-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966a9.78 9.78 0 0 0-6.975-2.881c-5.433 0-9.86 4.371-9.864 9.8-.001 1.73.457 3.414 1.32 4.9l-.317 1.157 1.218-.32 1.019.598zm9.718-6.938c-.3-.15-1.771-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.776.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.49-.893-.797-1.496-1.782-1.672-2.08-.175-.3-.018-.462.158-.636.159-.156.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.233-.243-.586-.492-.507-.676-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.11 4.52.714.31 1.27.494 1.704.632.717.228 1.37.196 1.885.119.574-.086 1.771-.725 2.021-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z" />
               </svg>
             </a>
-            <a href="https://www.facebook.com/share/1KiGc3uQm6/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook OHS">
+            <a href="https://www.facebook.com/share/1KiGc3uQm6/?mibextid=wwXIfr" target="_blank" rel="noopener"
+              aria-label="Facebook OHS">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/centromedico_ohs?igsh=dnZ5N3U3dGNtNzhu" target="_blank" rel="noopener" aria-label="Instagram OHS">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://www.instagram.com/centromedico_ohs?igsh=dnZ5N3U3dGNtNzhu" target="_blank" rel="noopener"
+              aria-label="Instagram OHS">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/centro-m%C3%A9dico-ohs-45673b123/" target="_blank" rel="noopener" aria-label="LinkedIn OHS">
+            <a href="https://www.linkedin.com/in/centro-m%C3%A9dico-ohs-45673b123/" target="_blank" rel="noopener"
+              aria-label="LinkedIn OHS">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-            <a href="https://www.youtube.com/@CentroMedico_OHS/featured" target="_blank" rel="noopener" aria-label="YouTube OHS">
+            <a href="https://www.youtube.com/@CentroMedico_OHS/featured" target="_blank" rel="noopener"
+              aria-label="YouTube OHS">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                <path
+                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
           </div>
@@ -645,29 +721,38 @@
           <div class="social-links">
             <a href="https://wa.me/593999856207" target="_blank" rel="noopener" aria-label="WhatsApp Grupo Renee">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966a9.78 9.78 0 0 0-6.975-2.881c-5.433 0-9.86 4.371-9.864 9.8-.001 1.73.457 3.414 1.32 4.9l-.317 1.157 1.218-.32 1.019.598zm9.718-6.938c-.3-.15-1.771-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.776.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.49-.893-.797-1.496-1.782-1.672-2.08-.175-.3-.018-.462.158-.636.159-.156.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.233-.243-.586-.492-.507-.676-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.11 4.52.714.31 1.27.494 1.704.632.717.228 1.37.196 1.885.119.574-.086 1.771-.725 2.021-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966a9.78 9.78 0 0 0-6.975-2.881c-5.433 0-9.86 4.371-9.864 9.8-.001 1.73.457 3.414 1.32 4.9l-.317 1.157 1.218-.32 1.019.598zm9.718-6.938c-.3-.15-1.771-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.776.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.49-.893-.797-1.496-1.782-1.672-2.08-.175-.3-.018-.462.158-.636.159-.156.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.233-.243-.586-.492-.507-.676-.516-.174-.008-.374-.01-.574-.01-.2 0-.526.075-.802.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.11 3.22 5.11 4.52.714.31 1.27.494 1.704.632.717.228 1.37.196 1.885.119.574-.086 1.771-.725 2.021-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z" />
               </svg>
             </a>
-            <a href="https://www.facebook.com/share/14eQuZJYQS2/?mibextid=wwXIf" target="_blank" rel="noopener" aria-label="Facebook Grupo Renee">
+            <a href="https://www.facebook.com/share/14eQuZJYQS2/?mibextid=wwXIf" target="_blank" rel="noopener"
+              aria-label="Facebook Grupo Renee">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/grupo_renee?igsh=ZjVkb3Bjemh2Ynd6" target="_blank" rel="noopener" aria-label="Instagram Grupo Renee">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://www.instagram.com/grupo_renee?igsh=ZjVkb3Bjemh2Ynd6" target="_blank" rel="noopener"
+              aria-label="Instagram Grupo Renee">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/grupo-renee/" target="_blank" rel="noopener" aria-label="LinkedIn Grupo Renee">
+            <a href="https://www.linkedin.com/in/grupo-renee/" target="_blank" rel="noopener"
+              aria-label="LinkedIn Grupo Renee">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             </a>
-            <a href="https://www.youtube.com/@grureneesas.a.1385" target="_blank" rel="noopener" aria-label="YouTube Grupo Renee">
+            <a href="https://www.youtube.com/@grureneesas.a.1385" target="_blank" rel="noopener"
+              aria-label="YouTube Grupo Renee">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                <path
+                  d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
           </div>
@@ -681,7 +766,8 @@
     <div class="footer-dots" aria-hidden="true"></div>
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/img/Iconos/logos/centro integrado blanco.svg" alt="Centro Integrado 360" class="footer-logo-main" loading="lazy" />
+        <img src="assets/img/Iconos/logos/centro integrado blanco.svg" alt="Centro Integrado 360"
+          class="footer-logo-main" loading="lazy" />
         <p class="footer-claim">"La evolución de la salud y seguridad"</p>
       </div>
       <div class="footer-logos">
