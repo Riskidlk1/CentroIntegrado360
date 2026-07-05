@@ -88,7 +88,7 @@
     height: 80px !important;
     object-fit: contain !important;
     transition: transform 0.3s ease !important;
-    filter: brightness(0) saturate(100%) invert(18%) sepia(97%) saturate(2463%) hue-rotate(215deg) brightness(95%) contrast(101%) !important;
+
 }
 
 .service-card span {
