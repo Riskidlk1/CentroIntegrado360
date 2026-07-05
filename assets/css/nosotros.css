@@ -9,7 +9,7 @@
    ========================================================= */
 .nos-hero {
   padding: calc(var(--header-h) + var(--sp-4)) 0 var(--sp-5);
-  background: #faf8f5;
+  background: var(--blanco);
   position: relative;
   overflow: hidden;
 }
@@ -156,7 +156,7 @@
    MISIÓN / VISIÓN / VALORES — 3 tarjetas
    ========================================================= */
 .nos-mvv {
-  background: #faf8f5 !important;
+  background: var(--blanco) !important;
 }
 
 .nos-mvv-grid {
@@ -286,7 +286,7 @@
    ¿POR QUÉ ELEGIRNOS? — cuadrícula de 6 ventajas con marcadores de fotos
    ========================================================= */
 .nos-porque {
-  background: linear-gradient(180deg, var(--gris-050) 0%, var(--blanco) 100%);
+  background: var(--blanco);
   padding: var(--sp-6) 0;
 }
 
