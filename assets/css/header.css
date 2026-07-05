@@ -7,7 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(135deg, var(--azul-900), var(--azul));
+  background: var(--degradado-azul);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -25,6 +25,14 @@
   align-items: center;
   gap: .6rem;
   margin-right: auto;
+}
+
+.site-header .brand-logo-img {
+  height: 96px;
+  width: auto;
+  margin-top: -24px;
+  margin-bottom: -24px;
+  display: block;
 }
 
 .site-header .brand-360 {
@@ -339,5 +347,11 @@
     background: var(--naranja-600) !important;
     border-color: var(--naranja-600) !important;
     color: var(--negro) !important;
+  }
+
+  .site-header .brand-logo-img {
+    height: 70px !important;
+    margin-top: -17px !important;
+    margin-bottom: -17px !important;
   }
 }

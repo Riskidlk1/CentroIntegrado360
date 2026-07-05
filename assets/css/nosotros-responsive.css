@@ -8,44 +8,30 @@
   .nos-hero-fig { order: -1; aspect-ratio: 16/9; }
   .nos-mvv-grid { grid-template-columns: 1fr; }
 
-  /* Porque: apila en columna */
-  .nos-porque-layout {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 2rem !important;
-    align-items: center !important;
+  /* Porque: apila en 2 columnas en tablet */
+  .nos-advantages-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--sp-3) !important;
   }
-  
-  
-  .nos-col {
-    width: 100% !important;
-    max-width: 600px !important;
-    gap: 1rem !important;
-  }
-  
-  .nos-col--left {
-    flex-direction: column !important;
-    order: 1 !important;
-  }
-  
-  .nos-col--right {
-    order: 3 !important;
-  }
+}
 
-  .nos-vi {
-    opacity: 1 !important;
-    transform: none !important;
+@media (max-width: 768px) {
+  /* Porque: mantiene 2 columnas en móvil */
+  .nos-advantages-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
   }
-  
-  /* Alinear todo a la izquierda en móvil */
-  .nos-vi-body--r {
-    text-align: left !important;
+  .nos-advantage-card {
+    padding: 1.25rem 0.75rem !important;
   }
-  
-  .nos-vi--right {
-    border-right: none !important;
-    border-left: 5px solid var(--naranja) !important;
-    flex-direction: row-reverse !important;
+  .nos-card-num {
+    font-size: 1.8rem !important;
+  }
+  .nos-card-text h3 {
+    font-size: 0.95rem !important;
+  }
+  .nos-card-text p {
+    font-size: 0.75rem !important;
   }
 }
 
@@ -53,12 +39,12 @@
   .nos-hero { padding-top: calc(var(--header-h) + var(--sp-4)); }
   .nos-hero-title { font-size: 2.2rem; }
   .nos-brands { gap: .7rem; }
-  .nos-brand-pill img { height: 30px; }
+  .nos-brand-raw-img { height: 30px; }
   .nos-porque-cta { flex-direction: column; }
-  .nos-porque-cta .btn { width: 100%; text-align: center; }
+  .nos-porque-cta .btn, .nos-porque-cta .btn-primary, .nos-porque-cta .btn-outline { width: 100% !important; text-align: center !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nos-vi { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .nos-advantage-card { opacity: 1 !important; transform: none !important; transition: none !important; }
   .nos-mvv-card:hover { transform: none; }
 }

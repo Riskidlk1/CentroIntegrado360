@@ -5,14 +5,15 @@
 
 :root {
   /* Colores de marca (línea gráfica oficial) */
-  --azul: #134295;
-  --azul-900: #0c2c66;
-  --azul-700: #0f3578;
+  --azul: #05439a;
+  --azul-900: #000066;
+  --azul-700: #05275d;
   --azul-050: #eaf0fb;
-  --naranja: #fe9f12;
-  --naranja-600: #e98c00;
-  --negro: #070707;
+  --naranja: #fa9e12;
+  --naranja-600: #d9800e;
+  --negro: #060606;
   --blanco: #ffffff;
+  --degradado-azul: linear-gradient(135deg, #000066 0%, #05439a 100%);
 
   /* Neutros tintados hacia el azul de marca */
   --gris-900: #14233f;
@@ -221,7 +222,7 @@ strong {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(135deg, var(--azul-900), var(--azul));
+  background: var(--degradado-azul);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1701,7 +1702,7 @@ strong {
 
 /* ---------------- Ecosistema digital ---------------- */
 .ecosistema {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
   color: var(--blanco);
 }
 
@@ -1830,7 +1831,8 @@ a.eco-card:focus-visible,
    REDES SOCIALES SECTION (ROYAL BLUE - FLAT)
    ========================================================= */
 .social-blue-section {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
+  background-attachment: fixed;
   color: var(--blanco);
   padding: 3.5rem 0;
   position: relative;
@@ -1911,7 +1913,8 @@ a.eco-card:focus-visible,
 
 /* ---------------- Footer ---------------- */
 .site-footer {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
+  background-attachment: fixed;
   color: var(--blanco);
   padding: var(--sp-6) 0 var(--sp-4);
   position: relative;
@@ -2162,7 +2165,7 @@ a.eco-card:focus-visible,
 
 /* Chat Header */
 .chatbox-header {
-  background: linear-gradient(135deg, var(--azul-900), var(--azul));
+  background: var(--degradado-azul);
   color: var(--blanco);
   padding: 16px 20px;
   display: flex;
@@ -2456,7 +2459,7 @@ a.eco-card:focus-visible,
 
 /* Info Column */
 .contact-info-col {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
   color: var(--blanco);
   padding: var(--sp-5);
   position: relative;
@@ -2811,7 +2814,7 @@ a.eco-card:focus-visible,
 
 /* Rediseño Hero */
 .hero {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
   color: var(--blanco);
   padding: var(--sp-6) 0;
   position: relative;
@@ -2979,7 +2982,7 @@ a.eco-card:focus-visible,
 }
 
 .servicios {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
   color: var(--blanco);
   padding: var(--sp-6) 0;
 }
@@ -3087,7 +3090,7 @@ a.eco-card:focus-visible,
 }
 
 .btn-services-blue {
-  background: #134295;
+  background: var(--azul);
   color: var(--blanco);
   border-radius: 50px;
   padding: 0.6rem 1.6rem;
@@ -3597,7 +3600,7 @@ a.eco-card:focus-visible,
 
 /* Ecosistema Digital */
 .ecosistema {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
 }
 
 .eco-badge--crm {
@@ -3636,7 +3639,7 @@ a.eco-card:focus-visible,
 
 /* Acceso a Particulares Banner */
 .particulares-banner {
-  background: linear-gradient(135deg, rgba(19, 66, 149, 0.85), rgba(15, 23, 42, 0.85)), url("../img/Homepage/fondo (1).png") no-repeat center center / cover;
+  background: linear-gradient(135deg, rgba(0, 0, 60, 0.85), rgba(5, 67, 154, 0.85)), url("../img/Homepage/fondo (1).png") no-repeat center center / cover;
   color: var(--blanco);
   padding: 0;
   position: relative;

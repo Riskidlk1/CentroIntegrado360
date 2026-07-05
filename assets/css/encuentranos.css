@@ -259,10 +259,30 @@
 }
 
 .enc-info-icon {
-  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   margin-top: .1rem;
 }
+
+.enc-info-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(97%) saturate(2463%) hue-rotate(215deg) brightness(95%) contrast(101%);
+}
+
+.enc-btn-wa-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  vertical-align: middle;
+  margin-right: .4rem;
+  filter: brightness(0) invert(1);
+}
+
 
 .enc-info-list strong {
   display: block;

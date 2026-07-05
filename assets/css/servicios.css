@@ -77,18 +77,19 @@
 
 /* Contenedor de Iconos */
 .service-card-icon-wrap {
-    width: 64px !important;
-    height: 64px !important;
+    width: 88px !important;
+    height: 88px !important;
     display: grid !important;
     place-items: center !important;
     background: none !important;
 }
 
 .service-card-icon-wrap img {
-    width: 56px !important;
-    height: 56px !important;
+    width: 80px !important;
+    height: 80px !important;
     object-fit: contain !important;
     transition: transform 0.3s ease !important;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(97%) saturate(2463%) hue-rotate(215deg) brightness(95%) contrast(101%) !important;
 }
 
 .service-card span {
@@ -300,7 +301,7 @@
 }
 
 .topic-item-icon {
-    color: var(--naranja) !important;
+    color: #05439a !important;
     font-weight: 900 !important;
     font-size: 0.8rem !important;
     flex-shrink: 0 !important;
@@ -355,8 +356,28 @@
 @media (max-width: 600px) {
     .services-block-grid--salud,
     .services-block-grid--seguridad {
-        grid-template-columns: 1fr !important;
-        gap: 0.9rem !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+    }
+
+    .service-card {
+        padding: 1.25rem 0.5rem !important;
+        gap: 0.75rem !important;
+        border-radius: 12px !important;
+    }
+
+    .service-card span {
+        font-size: 0.8rem !important;
+    }
+
+    .service-card-icon-wrap {
+        width: 72px !important;
+        height: 72px !important;
+    }
+
+    .service-card-icon-wrap img {
+        width: 64px !important;
+        height: 64px !important;
     }
 
     .topics-grid {

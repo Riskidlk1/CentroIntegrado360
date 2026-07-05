@@ -32,7 +32,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(19, 66, 149, 0.95) 0%, rgba(19, 66, 149, 0.5) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 102, 0.95) 0%, rgba(5, 67, 154, 0.5) 100%);
   z-index: 2;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .prod-help-box {
-  background: var(--azul-900);
+  background: var(--degradado-azul);
   color: var(--blanco);
 }
 

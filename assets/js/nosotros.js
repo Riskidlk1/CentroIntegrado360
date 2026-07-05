@@ -30,8 +30,8 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Animación reveal para las tarjetas MVV
-  var revealEls = document.querySelectorAll(".reveal");
+  // Animación reveal para las tarjetas (MVV y ventajas)
+  var revealEls = document.querySelectorAll(".reveal, .nos-advantage-card");
   if ("IntersectionObserver" in window && !reduceMotion) {
     var revealIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -43,28 +43,11 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
 
     revealEls.forEach(function (el, i) {
-      el.style.transitionDelay = (i * 80) + "ms";
+      el.style.transitionDelay = (i * 60) + "ms";
       revealIO.observe(el);
     });
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-  }
-
-  // Animación slide-in para los ítems de ¿Por qué elegirnos?
-  var viItems = document.querySelectorAll(".nos-vi");
-  if ("IntersectionObserver" in window && !reduceMotion) {
-    var viIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          viIO.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    viItems.forEach(function (el) { viIO.observe(el); });
-  } else {
-    viItems.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
 })();
