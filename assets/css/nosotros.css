@@ -8,7 +8,7 @@
    2 columnas: copia izquierda | foto derecha
    ========================================================= */
 .nos-hero {
-  padding: calc(var(--header-h) + var(--sp-4)) 0 var(--sp-5);
+  padding: var(--sp-4) 0 var(--sp-5);
   background: var(--blanco);
   position: relative;
   overflow: hidden;
