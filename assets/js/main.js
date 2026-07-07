@@ -528,35 +528,92 @@
       submitBtn.style.opacity = "0.75";
       submitBtn.style.cursor = "not-allowed";
 
-      // Simular envío de datos
-      setTimeout(function () {
+      function restoreButton() {
+        if (btnText) btnText.textContent = originalText;
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "";
+        submitBtn.style.cursor = "";
+      }
+
+      function handleSuccess() {
+        // Crear mensaje de WhatsApp con la información del formulario
+        var wsMessage = "Hola OHS, he enviado el formulario de contacto con la siguiente información:\n\n" +
+          "*Nombre:* " + (object.name || "") + "\n" +
+          "*Empresa:* " + (object.company || "N/A") + "\n" +
+          "*Email:* " + (object.email || "") + "\n" +
+          "*Teléfono:* " + (object.phone || "") + "\n" +
+          "*Servicio:* " + (object.service || "N/A") + "\n" +
+          "*Ciudad:* " + (object.city || "N/A") + "\n" +
+          "*Mensaje:* " + (object.message || "");
+
+        var wsUrl = "https://wa.me/593992602555?text=" + encodeURIComponent(wsMessage);
+        
+        // Abrir WhatsApp en pestaña nueva
+        window.open(wsUrl, "_blank");
+
         // Mostrar alerta de éxito
         successAlert.style.display = "flex";
         
         // Desplazar suavemente hasta la alerta de éxito
         successAlert.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
-        // Resetear formulario
+        // Resetear formulario (manteniendo el access_key)
+        var keyInput = contactForm.querySelector('input[name="access_key"]');
+        var keyVal = keyInput ? keyInput.value : "";
         contactForm.reset();
+        if (keyInput) keyInput.value = keyVal;
 
-        // Restaurar estado del botón
-        setTimeout(function () {
-          if (btnText) btnText.textContent = originalText;
-          submitBtn.disabled = false;
-          submitBtn.style.opacity = "";
-          submitBtn.style.cursor = "";
-          
-          // Ocultar alerta de éxito después de un tiempo
+        // Ocultar alerta de éxito después de un tiempo
+        setTimeout(function() {
+          successAlert.style.opacity = "0";
           setTimeout(function() {
-            successAlert.style.opacity = "0";
-            setTimeout(function() {
-              successAlert.style.display = "none";
-              successAlert.style.opacity = "1";
-            }, 300);
-          }, 6000);
-        }, 2000);
+            successAlert.style.display = "none";
+            successAlert.style.opacity = "1";
+          }, 300);
+        }, 8000);
+      }
 
-      }, 1500);
+      // Obtener datos del formulario
+      var formData = new FormData(contactForm);
+      var object = Object.fromEntries(formData);
+      var json = JSON.stringify(object);
+
+      // Si no han configurado la clave de acceso, simulamos el envío para no romper la experiencia local
+      if (object.access_key === "YOUR_ACCESS_KEY_HERE" || !object.access_key) {
+        console.warn("Web3Forms: Para recibir los correos reales, regístrate gratis en https://web3forms.com/ y coloca tu Access Key en el input hidden del formulario.");
+        setTimeout(function () {
+          handleSuccess();
+          restoreButton();
+        }, 1500);
+        return;
+      }
+
+      // Envío real con Web3Forms
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: json
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if (data.success) {
+          handleSuccess();
+        } else {
+          alert("Hubo un error al enviar el formulario: " + (data.message || "Por favor intenta de nuevo."));
+        }
+      })
+      .catch(function(error) {
+        console.error("Error:", error);
+        alert("Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.");
+      })
+      .finally(function() {
+        restoreButton();
+      });
     });
   }
 

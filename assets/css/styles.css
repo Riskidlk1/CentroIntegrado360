@@ -2093,9 +2093,9 @@ a.eco-card:focus-visible,
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(5, 67, 154, 0.4); /* Fondo azulito */
+  border: 1px solid var(--blanco); /* Bordes blancos */
+  color: var(--blanco);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2108,17 +2108,17 @@ a.eco-card:focus-visible,
   fill: currentColor;
 }
 
-.footer-social-icons a[fill="none"] svg {
+.footer-social-icons a svg[fill="none"] {
   fill: none;
   stroke: currentColor;
 }
 
 .footer-social-icons a:hover {
-  background: var(--degradado-azul);
-  border-color: transparent;
-  color: var(--blanco);
+  background: var(--naranja);
+  border-color: var(--naranja);
+  color: var(--negro);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(19, 66, 149, 0.3);
+  box-shadow: 0 4px 12px rgba(250, 158, 18, 0.4);
 }
 
 .footer-logos-alliance {
