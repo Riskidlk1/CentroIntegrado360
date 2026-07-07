@@ -546,7 +546,13 @@
           "*Ciudad:* " + (object.city || "N/A") + "\n" +
           "*Mensaje:* " + (object.message || "");
 
-        var wsUrl = "https://wa.me/593992602555?text=" + encodeURIComponent(wsMessage);
+        var waNumber = "593992602555"; // Default
+        var selectedCity = (object.city || "").toLowerCase();
+        if (selectedCity === "quito") {
+          waNumber = "593978903278";
+        }
+
+        var wsUrl = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(wsMessage);
         
         // Abrir WhatsApp en pestaña nueva
         window.open(wsUrl, "_blank");

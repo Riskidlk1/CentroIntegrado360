@@ -84,6 +84,11 @@
       var specialtyVal = formSpecialty.value;
 
       var waNumber = "593992602555"; // Contacto OHS
+      if (branchVal === "Guayaquil — Mucho Lote") {
+        waNumber = "593986662959";
+      } else if (branchVal === "Quito (Sede OHS)" || branchVal === "Quito") {
+        waNumber = "593978903278";
+      }
       
       // Construir el mensaje formateado para WhatsApp
       var text = "Hola OHS Centro Médico. Deseo agendar una cita médica de especialidad.\n\n" +
