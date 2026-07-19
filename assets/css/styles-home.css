@@ -7,15 +7,18 @@
 
 .home-banner {
     width: 100%;
-    background: #000;
+    background: #f8fafc;
     position: relative;
     overflow: hidden;
+    padding: 24px 0 32px;
 }
 
 .slider-wrapper {
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    width: 84%;
+    max-width: 1140px;
+    margin: 0 auto;
+    overflow: visible;
     cursor: grab;
     line-height: 0;
     height: auto !important;
@@ -27,8 +30,16 @@
 
 .slider-track {
     display: flex;
+    gap: 24px;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     width: 100%;
+    height: auto !important;
+    overflow: visible;
+}
+
+.slide picture {
+    display: block !important;
+    width: 100% !important;
     height: auto !important;
 }
 
@@ -40,65 +51,65 @@
     display: block !important;
     line-height: 0 !important;
     height: auto !important;
+    border-radius: 20px;
     overflow: hidden !important;
+    box-shadow: 0 10px 25px rgba(19, 66, 149, 0.15);
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-.slide a {
-    display: block !important;
-    line-height: 0 !important;
-    width: 100% !important;
-    cursor: pointer !important;
+/* Efecto de profundidad para slides adyacentes */
+.slide:not(.active) {
+    transform: scale(0.95);
+    opacity: 0.65;
 }
 
 .slide img {
     width: 100% !important;
     height: auto !important;
     max-height: 560px !important;
-    object-fit: contain !important;
-    background-color: #000;
+    object-fit: cover !important;
+    background-color: transparent;
     display: block !important;
+    border-radius: 20px;
 }
-
 
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(19, 66, 149, 0.7);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--azul);
     border: none;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     z-index: 10;
     transition: background 0.3s, transform 0.2s, opacity 0.3s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    opacity: 0.85;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .slider-btn:hover {
-    background: var(--naranja);
-    color: var(--negro);
-    opacity: 1;
+    background: var(--blanco);
+    color: var(--naranja);
     transform: translateY(-50%) scale(1.08);
 }
 
 .prev-btn {
-    left: 16px;
+    left: -24px;
 }
 
 .next-btn {
-    right: 16px;
+    right: -24px;
 }
 
 .slider-dots {
     position: absolute;
-    bottom: 16px;
+    bottom: -24px; /* Colocados debajo del banner con margen */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -110,14 +121,14 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.45);
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: rgba(19, 66, 149, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     cursor: pointer;
     transition: background 0.3s, transform 0.2s, width 0.3s;
 }
 
 .dot:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(19, 66, 149, 0.4);
     transform: scale(1.1);
 }
 
@@ -130,13 +141,45 @@
 /* ===================== SECCIÓN FUERZA — HALFTONE ===================== */
 
 .fuerza {
-    background: var(--blanco);
-    padding: var(--sp-6) 0;
+    background: #ffffff;
+    padding: 0 !important;
     position: relative;
     overflow: hidden;
     border-radius: 0;
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.fuerza-inner {
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.fuerza-picture {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.fuerza-picture source,
+.fuerza-picture img,
+.fuerza-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
 }
 
 .fuerza::before,
@@ -413,7 +456,7 @@
 
 @media (max-width: 768px) {
     .slide img {
-        max-height: 320px;
+        max-height: none;
         object-position: center center;
     }
 
@@ -451,7 +494,7 @@
 
 @media (max-width: 480px) {
     .slide img {
-        max-height: 240px;
+        max-height: none;
     }
 
     .prev-btn {
@@ -826,24 +869,79 @@
 
 @media (max-width: 991px) {
     .serv-card {
+        display: block !important;
+        position: relative !important;
+        padding: 1.25rem 1rem 1.25rem 1.25rem !important;
         overflow: hidden !important;
-        min-height: unset !important;
+        min-height: 250px !important;
+    }
+
+    .serv-card-content {
+        width: 70% !important;
+        max-width: 70% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.55rem !important;
+        padding-bottom: 0 !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .serv-card h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 0.15rem !important;
+        color: var(--blanco) !important;
+    }
+
+    .serv-card ul {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.35rem !important;
+    }
+
+    .serv-card ul li {
+        font-size: 0.83rem !important;
+        line-height: 1.35 !important;
+        padding-left: 1.1rem !important;
+    }
+
+    .serv-card ul li::before {
+        font-size: 0.65rem !important;
+        top: 0.12rem !important;
+    }
+
+    .btn-services-blue,
+    .btn-services-orange {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 1.25rem !important;
+        margin-top: 0.35rem !important;
     }
 
     .serv-card-media {
-        position: relative !important;
-        bottom: unset !important;
-        right: unset !important;
-        width: 100% !important;
-        height: 220px !important;
-        justify-content: center !important;
-        pointer-events: auto !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        right: -8px !important;
+        top: auto !important;
+        left: auto !important;
+        height: 95% !important;
+        max-height: 250px !important;
+        width: 45% !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: flex-end !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+        margin: 0 !important;
     }
 
     .serv-card-media img {
         height: 100% !important;
         width: auto !important;
-        object-position: bottom center !important;
+        max-width: none !important;
+        object-fit: contain !important;
+        object-position: bottom right !important;
+        vertical-align: bottom !important;
+        display: block !important;
     }
 }
 
@@ -1040,7 +1138,7 @@
     .slide img {
         height: auto !important;
         max-height: none !important;
-        object-fit: contain !important;
+        object-fit: cover !important;
     }
 }
 

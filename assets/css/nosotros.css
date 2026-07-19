@@ -35,8 +35,8 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 3rem;
   align-items: center;
-  width: min(100% - 2.5rem, 1400px) !important;
-  max-width: 1400px !important;
+  width: min(100% - 2.5rem, var(--maxw)) !important;
+  max-width: var(--maxw) !important;
 }
 
 /* Copy */

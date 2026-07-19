@@ -70,7 +70,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 12px);
   -webkit-text-size-adjust: 100%;
-  overflow-x: clip;
 }
 
 body {
@@ -81,7 +80,7 @@ body {
   color: var(--gris-900);
   background: var(--blanco);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
@@ -1942,8 +1941,8 @@ a.eco-card:focus-visible,
   margin-bottom: 3rem;
   position: relative;
   z-index: 2;
-  width: min(100% - 2.5rem, 1400px) !important;
-  max-width: 1400px !important;
+  width: min(100% - 2.5rem, var(--maxw)) !important;
+  max-width: var(--maxw) !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2163,8 +2162,8 @@ a.eco-card:focus-visible,
   margin-top: 2rem;
   position: relative;
   z-index: 2;
-  width: min(100% - 2.5rem, 1400px) !important;
-  max-width: 1400px !important;
+  width: min(100% - 2.5rem, var(--maxw)) !important;
+  max-width: var(--maxw) !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -3119,10 +3118,44 @@ a.eco-card:focus-visible,
 
 /* Rediseño Es Una Sola Fuerza */
 .fuerza {
-  background: var(--blanco);
-  padding: var(--sp-6) 0;
+  background: #ffffff;
+  padding: 0 !important;
   position: relative;
   overflow: hidden;
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.fuerza-inner {
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.fuerza-picture {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.fuerza-picture source,
+.fuerza-picture img,
+.fuerza-img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
 }
 
 .fuerza::before {
@@ -3994,24 +4027,79 @@ a.eco-card:focus-visible,
   }
 
   .serv-card {
-    grid-template-columns: 1fr;
-    padding: var(--sp-4) var(--sp-4) 0 var(--sp-4);
-    gap: 1.5rem;
+    display: block !important;
+    position: relative !important;
+    padding: 1.25rem 1rem 1.25rem 1.25rem !important;
+    overflow: hidden !important;
+    min-height: 240px !important;
+  }
+
+  .serv-card-content {
+    width: 70% !important;
+    max-width: 70% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.55rem !important;
+    padding-bottom: 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .serv-card h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.15rem !important;
+    color: var(--blanco) !important;
+  }
+
+  .serv-card ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+  }
+
+  .serv-card ul li {
+    font-size: 0.83rem !important;
+    line-height: 1.35 !important;
+    padding-left: 1.1rem !important;
+  }
+
+  .serv-card ul li::before {
+    font-size: 0.65rem !important;
+    top: 0.12rem !important;
+  }
+
+  .btn-services-blue,
+  .btn-services-orange {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 1.25rem !important;
+    margin-top: 0.35rem !important;
   }
 
   .serv-card-media {
-    justify-content: center;
-    align-items: flex-end;
-    height: auto;
+    position: absolute !important;
+    bottom: 0 !important;
+    right: -10px !important;
+    top: auto !important;
+    left: auto !important;
+    height: 92% !important;
+    max-height: 240px !important;
+    width: 42% !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    margin: 0 !important;
   }
 
   .serv-card-media img {
-    height: 240px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    object-position: bottom center;
-    vertical-align: bottom;
+    height: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: bottom right !important;
+    vertical-align: bottom !important;
+    display: block !important;
   }
 
   .solucionamos-grid {
@@ -4137,4 +4225,25 @@ a.eco-card:focus-visible,
   color: var(--gris-700);
   font-size: var(--fs-sm);
   line-height: 1.5;
+}
+
+/* =========================================================
+   Soporte para Pantallas Grandes / Smart TVs (Widescreen)
+   ========================================================= */
+@media (min-width: 1600px) {
+  :root {
+    --maxw: 1360px; /* Incrementa el ancho máximo de los contenedores */
+  }
+  html {
+    font-size: 17.5px; /* Escala ligeramente rem para legibilidad a distancia */
+  }
+}
+
+@media (min-width: 2000px) {
+  :root {
+    --maxw: 1560px; /* Incrementa más para pantallas ultra-anchas o TVs */
+  }
+  html {
+    font-size: 19px; /* Mayor escala para legibilidad óptima en TVs */
+  }
 }
