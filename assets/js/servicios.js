@@ -52,12 +52,14 @@
         }
 
         if (whatsappUrl) {
-          // Agregar micro-animación antes de redirigir
           btn.style.transform = "scale(0.95)";
           setTimeout(function() {
             btn.style.transform = "";
-            window.open(whatsappUrl, "_blank");
           }, 150);
+          var opened = window.open(whatsappUrl, "_blank");
+          if (!opened) {
+            window.location.href = whatsappUrl;
+          }
         }
       });
     });

@@ -3124,9 +3124,7 @@ a.eco-card:focus-visible,
   overflow: hidden;
   width: 100% !important;
   max-width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  margin: 0 !important;
 }
 
 .fuerza-inner {
@@ -3134,17 +3132,16 @@ a.eco-card:focus-visible,
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
+  display: block !important;
 }
 
 .fuerza-picture {
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
-  margin: 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
 }
 
 .fuerza-picture source,
@@ -3153,9 +3150,12 @@ a.eco-card:focus-visible,
   width: 100% !important;
   max-width: 100% !important;
   height: auto !important;
+  max-height: 85vh;
+  object-fit: cover;
+  object-position: center;
   display: block !important;
   margin: 0 auto !important;
-  object-fit: contain !important;
+  border-radius: 0 !important;
 }
 
 .fuerza::before {
@@ -4029,14 +4029,14 @@ a.eco-card:focus-visible,
   .serv-card {
     display: block !important;
     position: relative !important;
-    padding: 1.25rem 1rem 1.25rem 1.25rem !important;
+    padding: 1.25rem 0.85rem 1.25rem 0.75rem !important;
     overflow: hidden !important;
     min-height: 240px !important;
   }
 
   .serv-card-content {
-    width: 70% !important;
-    max-width: 70% !important;
+    width: 68% !important;
+    max-width: 68% !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 0.55rem !important;
@@ -4060,7 +4060,8 @@ a.eco-card:focus-visible,
   .serv-card ul li {
     font-size: 0.83rem !important;
     line-height: 1.35 !important;
-    padding-left: 1.1rem !important;
+    padding-left: 0.95rem !important;
+    color: var(--blanco) !important;
   }
 
   .serv-card ul li::before {
@@ -4078,12 +4079,12 @@ a.eco-card:focus-visible,
   .serv-card-media {
     position: absolute !important;
     bottom: 0 !important;
-    right: -10px !important;
+    right: -8px !important;
     top: auto !important;
     left: auto !important;
     height: 92% !important;
     max-height: 240px !important;
-    width: 42% !important;
+    width: 44% !important;
     display: flex !important;
     justify-content: flex-end !important;
     align-items: flex-end !important;
@@ -4101,6 +4102,27 @@ a.eco-card:focus-visible,
     vertical-align: bottom !important;
     display: block !important;
   }
+
+@media (max-width: 430px) {
+  .serv-card {
+    padding: 1.15rem 0.5rem 1.15rem 0.6rem !important;
+  }
+
+  .serv-card-content {
+    width: 68% !important;
+    max-width: 68% !important;
+  }
+
+  .serv-card ul li {
+    padding-left: 0.85rem !important;
+  }
+
+  .serv-card-media {
+    right: -24px !important;
+    width: 42% !important;
+    max-height: 230px !important;
+  }
+}
 
   .solucionamos-grid {
     grid-template-columns: 1fr;
@@ -4228,7 +4250,7 @@ a.eco-card:focus-visible,
 }
 
 /* =========================================================
-   Soporte para Pantallas Grandes / Smart TVs (Widescreen)
+   Soporte para Pantallas Grandes / Smart TVs (Widescreen & 4K)
    ========================================================= */
 @media (min-width: 1600px) {
   :root {
@@ -4245,5 +4267,23 @@ a.eco-card:focus-visible,
   }
   html {
     font-size: 19px; /* Mayor escala para legibilidad óptima en TVs */
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --maxw: 1860px; /* Ancho amplio para monitores 2K/4K */
+  }
+  html {
+    font-size: 21px; /* Escala tipográfica para pantallas 2K/4K */
+  }
+}
+
+@media (min-width: 3400px) {
+  :root {
+    --maxw: 2200px; /* Ancho óptimo para televisores Smart TV 4K UHD */
+  }
+  html {
+    font-size: 24px; /* Legibilidad excelente a distancia en Smart TV 4K */
   }
 }

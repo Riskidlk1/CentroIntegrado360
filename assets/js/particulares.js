@@ -174,9 +174,12 @@
         text += "- *Hora sugerida:* Por coordinar\n";
       }
 
-      // Codificar URL y abrir WhatsApp
-      var waUrl = "https://api.whatsapp.com/send?phone=" + waNumber + "&text=" + encodeURIComponent(text);
-      window.open(waUrl, "_blank");
+      // Codificar URL y abrir WhatsApp (Compatible con WhatsApp y WhatsApp Business)
+      var waUrl = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(text);
+      var opened = window.open(waUrl, "_blank");
+      if (!opened) {
+        window.location.href = waUrl;
+      }
       
       // Cerrar modal
       closeModal();

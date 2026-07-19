@@ -765,11 +765,14 @@
     var footer = "\nQuedo atento a su cotización formal. ¡Gracias!";
     var fullText = greeting + clientInfo + itemsText + footer;
     
-    // Generar link WhatsApp
-    var waUrl = "https://api.whatsapp.com/send?phone=" + waNumber + "&text=" + encodeURIComponent(fullText);
+    // Generar link WhatsApp (Compatible con WhatsApp y WhatsApp Business)
+    var waUrl = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(fullText);
     
-    // Abrir en pestaña nueva
-    window.open(waUrl, "_blank");
+    // Abrir en pestaña nueva o redirección
+    var opened = window.open(waUrl, "_blank");
+    if (!opened) {
+      window.location.href = waUrl;
+    }
 
     // Opcional: Limpiar el carrito después de enviar
     cart = [];
